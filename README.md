@@ -1,12 +1,27 @@
 # Unleash the m365
 This repository contains multiple files regarding the investigation about the Xiaomi Mijia M365 Scooter.
 
+**Table of Contents**
+
+* [Unleash the m365](#unleash-the-m365)
+    * [Research](#research)
+		* [Mi Home](#mi-home)
+			* [Android](#android)
+				* [APP <--> Server Communication](#app-server-communication)
+			* [IOS](#ios)
+	* [Downgrade](#downgrade)
+	* [Firmware Mods](#firmware-mods)
+	* [Hardware Mods](#hardware-mods)
+	* [Files Index](#files-index)
+	* [License](#license)
+	* [Acknowledgments](#acknowledgments)
+
 ## Research
 This section contains information regarding the research about things like the official apps or the Bluetooth communication protocol.
 
 ### Mi Home
 #### Android
-##### APP <--> Server Communication
+##### APP Server Communication
 All the requests performed by the app to the servers regarding with the scooter (Check updates etc) are ciphered using RC4, in the case of the latest android version all the parameters used to create the key are sent on every request.
 
 ```
@@ -52,11 +67,9 @@ def rc4mi(data, key):
 ## Files Index
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
 * Hector Cuesta [H3ku](https://twitter.com/HectorCuesta)
 * Jesus Anton [Patatas Fritas](https://twitter.com/HackingPatatas)
 * Borja Martinez [Borjmz](https://twitter.com/Qm9yamFN)
