@@ -59,7 +59,21 @@ def rc4mi(data, key):
 #### IOS
 
 ## Downgrade
-
+When the app check for upgrades it performs a requests to the xiaomi servers, more exactly to the following endpoint "/app/home/latest_version" sending the following content (It change a little bit from android to IOS but its not important).
+```
+{"model":"ninebot.scooter.v1"}
+```
+Then the server response the following data, to perform the update its as easy as intercept the response from the server, fill all the parameters and cipher the message with the correct sscurity and the nonce of the request.
+```
+{"code":0,"message":"ok","result":{"version":"","url":"","changeLog":"","md5":""}}
+```
+* Code: 0
+* message: ok
+* result
+	* version: anything you want Example 1.0.1_237
+	* url: Url to a zip file containing the firmware
+	* changeLog: anything you want
+	* md5: md5 hash of the zip file
 ## Firmware Mods
 
 ## Hardware Mods
@@ -73,4 +87,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hector Cuesta [H3ku](https://twitter.com/HectorCuesta)
 * Jesus Anton [Patatas Fritas](https://twitter.com/HackingPatatas)
 * Borja Martinez [Borjmz](https://twitter.com/Qm9yamFN)
+* Jaime Martin
 
